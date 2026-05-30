@@ -24,16 +24,16 @@ export default function AIAssistantPage() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-5">
-          <input
-            type="text"
-            placeholder="Ask AI Assistant..."
-            className="flex-1 p-3 md:p-4 rounded-xl bg-[#1F2937] border border-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 transition"
-          />
+        <div className="flex gap-2 mt-5">
+           <input
+             type="text"
+             placeholder="Ask AI Assistant..."
+             className="flex-1 min-w-0 p-3 md:p-4 rounded-xl bg-[#1F2937] border border-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 transition text-sm md:text-base"
+           />
 
-          <button className="bg-blue-600 hover:bg-blue-700 transition duration-300 px-6 md:px-8 py-3 md:py-0 rounded-xl font-semibold">
-            Send
-          </button>
+           <button className="bg-blue-600 hover:bg-blue-700 transition duration-300 px-4 md:px-8 rounded-xl font-semibold text-sm md:text-base">
+              Send
+           </button>
         </div>
       </div>
     </div>
