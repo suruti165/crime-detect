@@ -87,24 +87,23 @@ export default function DashboardPage() {
   );
 
   useEffect(() => {
-  const token = localStorage.getItem("token");
-  const user = localStorage.getItem("user");
+    try {
+      const token = localStorage.getItem("token");
+      const user = localStorage.getItem("user");
 
-  if (!token || !user) {
-    router.push("/login");
-    return;
-  }
+      if (!token || !user) {
+         router.push("/login");
+         return;
+      }
 
-  const parsedUser = JSON.parse(user);
+       JSON.parse(user);
 
-  if (parsedUser.role !== "admin") {
-    alert("Access denied! Admin only.");
-    router.push("/");
-    return;
-  }
-
-  fetchReports();
-}, [router]);
+       fetchReports();
+     } catch (error) {
+       console.log("Auth error", error);
+       router.push("/login");
+     }
+    }, [router]);
   return (
     <div className="min-h-screen bg-[#0B1120] text-white p-8">
       <div className="flex justify-between items-center mb-6">
